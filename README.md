@@ -10,7 +10,7 @@ Un **microcontrolador** es una computadora integrada en uno o varios chips. Suel
 
 El fabricante nos proporcionó la lista de operaciones mínimas que debe soportar:
 
-| Mnemotécnico | Descripción                                                                          |
+| Memotécnico | Descripción                                                                          |
 | ------------ | ------------------------------------------------------------------------------------ |
 | `NOP`        | No realiza ninguna operación; el programa continúa con la siguiente instrucción.     |
 | `ADD`        | Suma los valores de los dos acumuladores.                                            |
