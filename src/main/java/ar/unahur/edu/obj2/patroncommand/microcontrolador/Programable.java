@@ -25,4 +25,8 @@ public interface Programable {
     Integer getAddr(Integer addr);
 
     void reset();
+
+    Programable copiar();
+
+    void copiarDesde(Programable microRespaldo);
 }

@@ -13,9 +13,7 @@ public final class Microcontrolador implements Programable{
     private Integer programCounter;
     private List<Integer> memoria;
 
-
-    
-    public Microcontrolador(Integer acumuladorA, Integer acumuladorB, Integer programCounter, List<Integer> memoria) {
+    public Microcontrolador() {
         this.reset();
     }
 
@@ -78,7 +76,22 @@ public final class Microcontrolador implements Programable{
         acumuladorB = 0;
         programCounter = 0;
         memoria = Arrays.asList(new Integer[1024]);
+    }
 
+    @Override
+    public Programable copiar() {
+        Microcontrolador respaldo = new Microcontrolador();
+        respaldo.acumuladorA = this.acumuladorA;
+        respaldo.acumuladorB = this.acumuladorB;
+        respaldo.programCounter = this.programCounter;
+        return respaldo;
+    }
+
+    @Override
+    public void copiarDesde(Programable microRespaldo) {
+        this.acumuladorA = microRespaldo.getAcumuladorA();
+        this.acumuladorB = microRespaldo.getAcumuladorB();
+        this.programCounter = microRespaldo.getProgramCounter();
     }
 
 }
